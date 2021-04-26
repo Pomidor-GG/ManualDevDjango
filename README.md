@@ -18,7 +18,7 @@ PermitRootLogin no
 ```
 `sudo systemctl reload ssh.service`
 
-#Python 3.8
+# Python 3.8
 ```
 sudo apt install software-properties-common
 sudo add-apt-repository ppa:deadsnakes/ppa
@@ -27,13 +27,13 @@ sudo apt install python3-pip
 sudo apt install -y python3-venv
 ```
 
-#Venv
+# Venv
 ```
 mkdir /home/USER/env/
 python3 -m venv /home/udoms/env/t_env
 ```
 
-#Cоздание проекта
+# Cоздание проекта
 ```
 pip3 install django
 sudo apt install python-django-common
@@ -41,7 +41,7 @@ sudo apt-get install python-django
 django-admin startproject PROJ  
 ```
 
-#WSGI
+# WSGI
 ```
 pip3 install uwsgi 
 sudo apt install uwgsi
@@ -65,7 +65,7 @@ chmod-socket = 666
 vacuum = true
 ```
 
-#Nginx
+# Nginx
 ```
 sudo apt install nginx
 sudo nano /etc/nginx/sites-available/PROJ_NAME.conf
@@ -117,7 +117,7 @@ uwsgi_param  SERVER_PORT        $server_port;
 uwsgi_param  SERVER_NAME        $server_name;
 ```
 `sudo ln -s /etc/nginx/sites-available/PROJ_NAME.conf /etc/nginx/sites-enabled/`
-#Статика
+# Статика
 `nano /home/pomig/prj/lite/lite/settings.py`
 ```Python
 # самое начало
@@ -132,5 +132,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 `mkdir media/img`
 `wget https://upload.wikimedia.org/wikipedia/commons/b/b9/First-google-logo.gif -O media/img/media.gif`
-##Рестарним nginx для применения изменений
+## Рестарним nginx для применения изменений
 `sudo /etc/init.d/nginx restar`
