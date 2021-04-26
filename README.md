@@ -89,7 +89,7 @@ server {
         alias /home/pomig/prj/lite/media;
     }
     
-   	location /static {
+    location /static {
 		alias /home/pomig/prj/lite/static;
 	}
 
