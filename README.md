@@ -137,5 +137,24 @@ mkdir media/img
 
 wget https://upload.wikimedia.org/wikipedia/commons/b/b9/First-google-logo.gif -O media/img/media.gif
 ```	
-## Рестарним nginx для применения изменений
+### Рестарним nginx для применения изменений
 `sudo /etc/init.d/nginx restar`
+
+# Supervisor для WSGI
+
+`sudo apt install supervisor`
+
+`sudo nano /etc/supervisor/conf.d/pomig.conf`
+```	
+[program:pomig]
+user = pomig
+directory = /home/pomig/prj/lite
+command = /home/pomig/prj/env/bin/uwsgi /home/pomig/prj/lite/uwsgi.ini
+autostart = 1
+autorestart = 1
+stopsignal = QUIT
+```	
+
+`supervisorctl reload`
+`supervisorctl update`
+
