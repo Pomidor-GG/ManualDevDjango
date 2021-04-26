@@ -28,6 +28,7 @@ sudo apt install python3-pip
 sudo apt install python3.8-venv
 sudo apt install -y python3-venv
 sudo apt install python-pip
+sudo apt-get install python3.8-dev
 ```
 
 # Venv
@@ -47,7 +48,7 @@ django-admin startproject PROJ
 
 # WSGI
 ```
-pip3 install uwsgi 
+pip install uwsgi 
 sudo apt install uwgsi
 ```
 В папке с проектом(там должен быть файл manage.py)
@@ -160,8 +161,7 @@ autorestart = 1
 stopsignal = QUIT
 ```	
 
-`supervisorctl reload`
+`supervisorctl reread`
 `supervisorctl update`
 
-
-
+`sudo supervisorctl restart pomig`
