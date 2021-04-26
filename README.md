@@ -52,14 +52,14 @@ sudo apt install uwgsi
 ```
 project = lite
 base = /home/pomig/prj
-#
+
 chdir = %(base)/%(project)
 home = /home/pomig/prj/env
-#
+
 module = lite.wsgi:application
 master = true
 processes = 5
-#
+
 socket = %(base)/%(project)/%(project).sock
 chmod-socket = 666
 vacuum = true
@@ -83,14 +83,16 @@ server {
     charset     utf-8;
     # max upload size
     client_max_body_size 75M;
+
     # Django media and static files
     location /media  {
         alias /home/pomig/prj/lite/media;
     }
-    #
+    
    	location /static {
 		alias /home/pomig/prj/lite/static;
 	}
+
     # Send all non-media requests to the Django server.
     location / {
         uwsgi_pass  django;
@@ -128,9 +130,12 @@ import os
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 ```	
-`python manage.py collectstatic`
+```	
+python manage.py collectstatic
 
-`mkdir media/img`
-`wget https://upload.wikimedia.org/wikipedia/commons/b/b9/First-google-logo.gif -O media/img/media.gif`
+mkdir media/img
+
+wget https://upload.wikimedia.org/wikipedia/commons/b/b9/First-google-logo.gif -O media/img/media.gif
+```	
 ## Рестарним nginx для применения изменений
 `sudo /etc/init.d/nginx restar`
