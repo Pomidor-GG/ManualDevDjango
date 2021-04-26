@@ -143,7 +143,7 @@ mkdir media/img
 wget https://upload.wikimedia.org/wikipedia/commons/b/b9/First-google-logo.gif -O media/img/media.gif
 ```	
 ### Рестарним nginx для применения изменений
-`sudo /etc/init.d/nginx restar`
+`sudo /etc/init.d/nginx restart`
 
 # Supervisor для WSGI
 
