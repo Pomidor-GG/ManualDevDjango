@@ -96,7 +96,7 @@ server {
     }
     
     location /static {
-		alias /home/pomig/prj/lite/static;
+		alias /home/pomig/prj/CloudTest/staticfiles;
 	}
 
     # Send all non-media requests to the Django server.
