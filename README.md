@@ -25,13 +25,16 @@ sudo apt install software-properties-common
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt install python3.8
 sudo apt install python3-pip
+sudo apt install python3.8-venv
 sudo apt install -y python3-venv
+sudo apt install python-pip
 ```
 
 # Venv
 ```
 mkdir /home/USER/env/
-python3 -m venv /home/udoms/env/t_env
+python3.8 -m venv env
+pip install uwsgi
 ```
 
 # Cоздание проекта
@@ -51,6 +54,7 @@ sudo apt install uwgsi
 `sudo nano uwsgi.ini`
 Для пути файла /home/pomig/prj/lite(lite - папка с проектом):
 ```
+[uwsgi]
 project = lite
 base = /home/pomig/prj
 
@@ -158,5 +162,6 @@ stopsignal = QUIT
 
 `supervisorctl reload`
 `supervisorctl update`
+
 
 
