@@ -177,3 +177,5 @@ stopsignal = QUIT
 `supervisorctl update`
 
 `sudo supervisorctl restart pomig`
+# Полезные команды 
+логи nginx хронятся в : `/var/log/nginx/`
