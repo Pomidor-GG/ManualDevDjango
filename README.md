@@ -31,6 +31,7 @@ sudo apt install python-pip
 sudo apt-get install python3.8-dev
 ```
 # PostgreSQL 
+```
 sudo apt install postgresql
 sudo -u postgres psql
 CREATE DATABASE banket;
@@ -39,6 +40,7 @@ ALTER ROLE userdb SET client_encoding TO 'utf8';
 ALTER ROLE userdb SET default_transaction_isolation TO 'read committed';
 ALTER ROLE userdb SET timezone TO 'UTC';
 GRANT ALL PRIVILEGES ON DATABASE movie TO userdb;
+```
 
 # Venv
 ```
