@@ -4,6 +4,7 @@
 # Пользователь
 ```
 sudo adduser testuser
+sudo usermod -aG sudo testuser
 ```
 # Обновления
 После создание BM нужно обновить систему 
