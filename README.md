@@ -184,3 +184,6 @@ stopsignal = QUIT
 `sudo supervisorctl restart pomig`
 # Полезные команды 
 логи nginx хранятся в : `/var/log/nginx/`
+
+`sudo chmod -R 777 CloudTest/`
+`sudo chmod -R 777 media/`
