@@ -66,7 +66,7 @@ django-admin startproject PROJ
 # WSGI
 ```
 pip install uwsgi 
-sudo apt install uwgsi
+sudo apt install uwsgi
 ```
 В папке с проектом(там должен быть файл manage.py)
 `sudo nano uwsgi.ini`
